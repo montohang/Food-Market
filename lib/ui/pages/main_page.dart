@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
           )),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Text('Navigation Bar'),
+            child: CustomBottomNavBar(),
           )
         ],
       ),
