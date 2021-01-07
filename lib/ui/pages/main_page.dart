@@ -39,7 +39,8 @@ class _MainPageState extends State<MainPage> {
                     subtitle: 'Seems you like have not\nordered any food yet',
                     picturePath: 'assets/love_burger.png',
                     buttonTitle1: 'Find Foods',
-                    buttonTap1: () {}),
+                    buttonTap1: () {},
+                    buttonTap2: () {}),
               ),
               Center(
                 child: Text("Profile"),

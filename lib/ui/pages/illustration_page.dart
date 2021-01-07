@@ -29,8 +29,7 @@ class IllustrationPage extends StatelessWidget {
             height: 150,
             margin: EdgeInsets.only(bottom: 50),
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(picturePath), fit: BoxFit.cover)),
+                image: DecorationImage(image: AssetImage(picturePath))),
           ),
           Text(title, style: blackFontSytle3.copyWith(fontSize: 20)),
           Text(subtitle,
@@ -56,14 +55,14 @@ class IllustrationPage extends StatelessWidget {
                   width: 200,
                   height: 50,
                   child: RaisedButton(
-                    onPressed: buttonTap2,
+                    onPressed: buttonTap1,
                     color: '8D92A3'.toColor(),
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),
-                    child: Text(buttonTitle1,
+                    child: Text(buttonTitle2 ?? 'title',
                         style: blackFontSytle3.copyWith(
-                            fontWeight: FontWeight.w500)),
+                            fontWeight: FontWeight.w500, color: Colors.white)),
                   ))
         ],
       ),
