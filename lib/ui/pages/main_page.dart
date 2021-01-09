@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
               ),
               Center(child: OrderHistoryPage()),
               Center(
-                child: Text("Profile"),
+                child: ProfilePage(),
               ),
             ],
           )),
