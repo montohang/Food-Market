@@ -201,7 +201,160 @@ class PaymentPage extends StatelessWidget {
                     ],
                   ),
                 ],
-              ))
+              )),
+          Container(
+              margin: EdgeInsets.only(bottom: defaultMargin),
+              padding:
+                  EdgeInsets.symmetric(horizontal: defaultMargin, vertical: 16),
+              color: Colors.white,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      'Details Transaction',
+                      style: blackFontSytle3,
+                    ),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            transaction.food.name,
+                            style: greyFontSytle,
+                          )),
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            NumberFormat.currency(
+                                    locale: 'id-ID',
+                                    symbol: 'IDR ',
+                                    decimalDigits: 0)
+                                .format(transaction.quantity +
+                                    transaction.food.price),
+                            style: blackFontSytle3,
+                            textAlign: TextAlign.right,
+                          )),
+                    ],
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            'Driver',
+                            style: greyFontSytle,
+                          )),
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            NumberFormat.currency(
+                                    locale: 'id-ID',
+                                    symbol: 'IDR ',
+                                    decimalDigits: 0)
+                                .format(50000),
+                            style: blackFontSytle3,
+                            textAlign: TextAlign.right,
+                          )),
+                    ],
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            'Tax 10%',
+                            style: greyFontSytle,
+                          )),
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            NumberFormat.currency(
+                                    locale: 'id-ID',
+                                    symbol: 'IDR ',
+                                    decimalDigits: 0)
+                                .format(transaction.quantity *
+                                    transaction.food.price *
+                                    0.1),
+                            style: blackFontSytle3,
+                            textAlign: TextAlign.right,
+                          )),
+                    ],
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            'Total',
+                            style: greyFontSytle,
+                          )),
+                      SizedBox(
+                          width: MediaQuery.of(context).size.width / 2 -
+                              defaultMargin -
+                              5,
+                          child: Text(
+                            NumberFormat.currency(
+                                    locale: 'id-ID',
+                                    symbol: 'IDR ',
+                                    decimalDigits: 0)
+                                .format(transaction.food.price *
+                                        transaction.quantity *
+                                        1.1 +
+                                    50000),
+                            style: blackFontSytle3.copyWith(
+                                fontWeight: FontWeight.w500,
+                                color: '1ABC9C'.toColor()),
+                            textAlign: TextAlign.right,
+                          )),
+                    ],
+                  ),
+                ],
+              )),
+          Container(
+            width: double.infinity,
+            height: 45,
+            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: RaisedButton(
+              onPressed: () {},
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)),
+              color: mainColor,
+              child: Text(
+                'Checkout Now',
+                style: GoogleFonts.poppins(
+                    color: Colors.black, fontWeight: FontWeight.w500),
+              ),
+            ),
+          ),
         ],
       ),
     );

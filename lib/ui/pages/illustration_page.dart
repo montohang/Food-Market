@@ -39,15 +39,17 @@ class IllustrationPage extends StatelessWidget {
               margin: EdgeInsets.only(top: 30, bottom: 12),
               width: 200,
               height: 50,
-              child: RaisedButton(
-                color: mainColor,
-                onPressed: buttonTap1,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8)),
-                child: Text(buttonTitle1,
-                    style:
-                        blackFontSytle3.copyWith(fontWeight: FontWeight.w500)),
+              child: SizedBox(
+                child: RaisedButton(
+                  color: mainColor,
+                  onPressed: buttonTap1,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Text(buttonTitle1,
+                      style: blackFontSytle3.copyWith(
+                          fontWeight: FontWeight.w500)),
+                ),
               )),
           (buttonTap2 == null)
               ? SizedBox()
