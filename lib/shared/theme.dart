@@ -11,3 +11,8 @@ TextStyle blackFontSytle2 = GoogleFonts.poppins()
 TextStyle blackFontSytle3 = GoogleFonts.poppins().copyWith(color: Colors.black);
 
 const double defaultMargin = 24;
+
+Widget loadingIndicator = SpinKitFadingCircle(
+  size: 45,
+  color: mainColor,
+);
