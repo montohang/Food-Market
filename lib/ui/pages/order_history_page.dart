@@ -9,7 +9,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder(builder: (_, state) {
+    return BlocBuilder<TransactionCubit, TransactionState>(builder: (_, state) {
       if (state is TransactionLoaded) {
         if (state.transactions.length == 0) {
           return IllustrationPage(
@@ -83,7 +83,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                                           TransactionStatus.cancelled)
                                   .toList();
 
-                          Column(
+                          return Column(
                             children: transactions
                                 .map((e) => Padding(
                                       padding: const EdgeInsets.only(
