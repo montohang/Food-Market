@@ -169,17 +169,28 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                           ],
                         ),
                         SizedBox(
-                            width: 163,
-                            height: 45,
-                            child: RaisedButton(
-                                child: Text('Order Now',
-                                    style: blackFontSytle3.copyWith(
-                                        fontWeight: FontWeight.w500)),
-                                onPressed: () {},
-                                color: mainColor,
-                                elevation: 0,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8))))
+                          width: 163,
+                          height: 45,
+                          child: RaisedButton(
+                            onPressed: () {
+                              Get.to(PaymentPage(
+                                transaction: widget.transaction.copyWith(
+                                    quantity: quantity,
+                                    total: quantity *
+                                        widget.transaction.food.price),
+                              ));
+                            },
+                            color: mainColor,
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            child: Text(
+                              'Order Now',
+                              style: blackFontSytle3.copyWith(
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                        )
                       ],
                     )
                   ],
