@@ -6,6 +6,7 @@ class AddressPage extends StatefulWidget {
   final File picturefile;
 
   AddressPage(this.user, this.password, this.picturefile);
+
   @override
   _AddressPageState createState() => _AddressPageState();
 }
@@ -159,7 +160,7 @@ class _AddressPageState extends State<AddressPage> {
                         isLoading = true;
                       });
 
-                      await context.bloc<UserCubit>().singUp(
+                      await context.bloc<UserCubit>().signUp(
                           user, widget.password,
                           pictureFile: widget.picturefile);
 

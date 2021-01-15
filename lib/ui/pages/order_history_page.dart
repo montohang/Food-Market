@@ -7,6 +7,7 @@ class OrderHistoryPage extends StatefulWidget {
 
 class _OrderHistoryPageState extends State<OrderHistoryPage> {
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TransactionCubit, TransactionState>(builder: (_, state) {

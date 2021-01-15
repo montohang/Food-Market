@@ -52,54 +52,51 @@ List<Food> mockFoods = [
   Food(
       id: 1,
       picturePath:
-          "https://ajheriscom.files.wordpress.com/2018/08/img_78772.jpg",
-      name: "Sate Padang",
-      description:
-          "Sate Padang adalah sebutan untuk tiga jenis varian sate di Sumatra Barat, yaitu Sate Padang, Sate Padang Panjang dan Sate Pariaman. Sate Padang memakai bahan daging sapi, lidah, atau jerohan (jantung, usus, dan tetelan) dengan bumbu kuah kacang kental (mirip bubur) ditambah cabai yang banyak sehingga rasanya pedas.",
-      ingredients: "daging sapi, lidah, jerohan, jantung, usus,tetelan, kuah kacang kental, cabai",
-      price: 200000,
-      rate: 4.5,
+          "https://i.pinimg.com/736x/06/7b/28/067b2879e5c9c42ec669bf639c3fbffc.jpg",
+      name: "Sate Sayur Sultan",
+      description: "Sate Sayur Sultan adalah menu sate vegan paling terkenal di Bandung. Sate ini dibuat dari berbagai macam bahan bermutu tinggi. Semua bahan ditanam dengan menggunakan teknologi masa kini sehingga memiliki nutrisi yang kaya.",
+      ingredients: "Bawang Merah, Paprika, Bawang Bombay, Timun",
+      price: 150000,
+      rate: 4.2,
       types: [FoodType.new_food, FoodType.recommended, FoodType.popular]),
   Food(
       id: 2,
       picturePath:
-          "https://www.chilibeli.com/uploads/blog/resep-rendang-padang-asli.jpg",
-      name: "Rendang",
+          "https://cdns.klimg.com/dream.co.id/resources/news/2020/04/06/133546/bikin-steak-di-rumah-pastikan-bumbunya-meresap-2004066.jpg",
+      name: "Steak Daging Sapi Korea",
       description:
-          "Rendang atau randang adalah masakan daging yang berasal dari Minangkabau. Masakan ini dihasilkan dari proses memasak suhu rendah dalam waktu lama menggunakan aneka rempah-rempah dan santan. Proses memasaknya memakan waktu berjam-jam hingga yang tinggal hanyalah potongan daging berwarna hitam pekat dan dedak.",
-      ingredients:
-          "daging sapi, santan, kunyit, lengkuas, serai, bawang merah, jahe, bawang putih",
-      price: 400000,
-      rate: 5.0),
+          "Daging sapi Korea adalah jenis sapi paling premium di Korea. Namun, untuk menikmatinya Anda tidak perlu jauh-jauh ke Korea Selatan. Steak Sapi Korea Oppa Bandung ini sudah terkenal di seluruh Indonesia dan sudah memiliki lebih dari 2 juta cabang.",
+      ingredients: "Daging Sapi Korea, Garam, Lada Hitam",
+      price: 750000,
+      rate: 4.5),
   Food(
       id: 3,
       picturePath:
-          "https://1.bp.blogspot.com/-JNWEuNfEv5M/WF9eXn3ElQI/AAAAAAAAHPk/FBxFQWD1e2I9P8pIV_V6oXhDEQsquqfpwCLcB/s1600/dendeng-balado-enak-dan-lezat.jpg",
-      name: "Dendeng",
-      description: "Dendeng adalah daging yang dipotong tipis menjadi serpihan yang lemaknya dipangkas, dibumbui dengan saus asam, asin atau manis dengan dikeringkan dengan api kecil atau diasinkan dan dijemur. Hasilnya adalah daging yang asin dan setengah manis dan tidak perlu disimpan di lemari es.",
-      ingredients: "daging sapi, santan, kunyit, lengkuas, serai, bawang merah, jahe, bawang putih",
-      price: 200000,
-      rate: 4.7,
+          "https://i1.wp.com/varminz.com/wp-content/uploads/2019/12/mexican-chopped-salad3.jpg?fit=843%2C843&ssl=1",
+      name: "Mexican Chopped Salad",
+      description: "Salad ala mexico yang kaya akan serat dan vitamin. Seluruh bahan diambil dari Mexico sehingga akan memiliki cita rasa yang original.",
+      ingredients: "Jagung, Selada, Tomat Ceri, Keju, Wortel",
+      price: 105900,
+      rate: 3.9,
       types: [FoodType.new_food]),
   Food(
       id: 4,
       picturePath:
-          "https://www.denpasarkota.go.id/uploads/datang/datang_192608090857_Inilah5WarungLontongSayurDiWilayahDenpasarSelatan.jpeg",
-      name: "Lontong",
-      description: "Lontong adalah makanan khas Indonesia yang berkembang di masyarakat Jawa, terbuat dari beras yang dibungkus dalam daun pisang dan dikukus di atas air mendidih selama beberapa jam dan jika air hampir habis dituangkan air lagi demikian berulang sampai beberapa kali.",
-      ingredients: "daging sapi, lidah, jerohan, jantung, usus,tetelan, kuah kacang kental, cabai",
-      price: 200000,
-      rate: 3.0,
+          "https://images.immediate.co.uk/production/volatile/sites/2/2016/08/25097.jpg?quality=90&resize=768,574",
+      name: "Sup Wortel Pedas",
+      description: "Sup wortel pedas yang unik ini cocok banget buat kalian-kalian yang suka pedas namun ingin tetap sehat. Rasanya yang unik akan memanjakan lidah Anda.",
+      ingredients: "Wortel, Seledri, Kacang Tanah, Labu, Garam, Gula",
+      price: 60000,
+      rate: 4.9,
       types: [FoodType.recommended]),
   Food(
       id: 5,
       picturePath:
-          "https://ajheriscom.files.wordpress.com/2018/08/img_78772.jpg",
-      name: "Sate Padang",
+          "https://cmxpv89733.i.lithium.com/t5/image/serverpage/image-id/478345i84598AB4FEB454CB/image-size/large?v=1.0&px=999",
+      name: "Korean Raw Beef Tartare",
       description:
-          "Sate Padang adalah sebutan untuk tiga jenis varian sate di Sumatra Barat, yaitu Sate Padang, Sate Padang Panjang dan Sate Pariaman. Sate Padang memakai bahan daging sapi, lidah, atau jerohan (jantung, usus, dan tetelan) dengan bumbu kuah kacang kental (mirip bubur) ditambah cabai yang banyak sehingga rasanya pedas.",
-      ingredients:
-          "daging sapi, lidah, jerohan, jantung, usus,tetelan, kuah kacang kental, cabai",
-      price: 200000,
-      rate: 4.8),
+          "Daging sapi Korea cincang yang disajikan mentah dan disiram saus spesial dengan toping kuning telur dan taburan biji wijen.",
+      ingredients: "Daging Sapi Korea, Telur, Biji Wijen",
+      price: 350000,
+      rate: 3.4)
 ];

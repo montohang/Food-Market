@@ -5,12 +5,14 @@ class FoodDetailsPage extends StatefulWidget {
   final Transaction transaction;
 
   FoodDetailsPage({this.onBackButtonPressed, this.transaction});
+
   @override
   _FoodDetailsPageState createState() => _FoodDetailsPageState();
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
   int quantity = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

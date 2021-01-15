@@ -15,7 +15,7 @@ class UserServices {
             jsonEncode(<String, String>{'email': email, 'password': password}));
 
     if (response.statusCode != 200) {
-      return ApiReturnValue(message: 'Please try agaian');
+      return ApiReturnValue(message: 'Please try again');
     }
 
     var data = jsonDecode(response.body);

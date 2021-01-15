@@ -20,9 +20,10 @@ class UserCubit extends Cubit<UserState> {
     }
   }
 
-  Future<void> singUp(User user, String password, {File pictureFile}) async {
+  Future<void> signUp(User user, String password, {File pictureFile}) async {
     ApiReturnValue<User> result =
         await UserServices.signUp(user, password, pictureFile: pictureFile);
+
     if (result.value != null) {
       emit(UserLoaded(result.value));
     } else {

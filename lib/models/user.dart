@@ -29,7 +29,7 @@ class User extends Equatable {
       houseNumber: data['houseNumber'],
       phoneNumber: data['phoneNumber'],
       city: data['city'],
-      picturePath: data['picturePath']);
+      picturePath: data['profile_photo_url']);
 
   User copyWith({
     int id,

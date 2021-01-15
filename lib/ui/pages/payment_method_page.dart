@@ -4,6 +4,7 @@ class PaymentMethodPage extends StatelessWidget {
   final String paymentURL;
 
   PaymentMethodPage(this.paymentURL);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

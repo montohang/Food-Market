@@ -11,6 +11,7 @@ class PaymentPage extends StatefulWidget {
 
 class _PaymentPageState extends State<PaymentPage> {
   bool isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     return GeneralPage(
