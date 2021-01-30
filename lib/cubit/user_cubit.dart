@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
@@ -11,16 +12,20 @@ class UserCubit extends Cubit<UserState> {
   UserCubit() : super(UserInitial());
 
   Future<void> signIn(String email, String password) async {
+    emit(UserLoadingSignIn());
     ApiReturnValue<User> result = await UserServices.signIn(email, password);
 
     if (result.value != null) {
       emit(UserLoaded(result.value));
+      log('data is not null');
     } else {
       emit(UserLoadingFailed(result.message));
+      log('data is null');
     }
   }
 
   Future<void> signUp(User user, String password, {File pictureFile}) async {
+    emit(UserLoadingRegister());
     ApiReturnValue<User> result =
         await UserServices.signUp(user, password, pictureFile: pictureFile);
 

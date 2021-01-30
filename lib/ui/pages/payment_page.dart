@@ -12,6 +12,37 @@ class PaymentPage extends StatefulWidget {
 class _PaymentPageState extends State<PaymentPage> {
   bool isLoading = false;
 
+  String name;
+  String email;
+  String address;
+  String houseNumber;
+  String phoneNumber;
+  String city;
+  String picturePath;
+
+  Future<String> getPref(String key) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+
+    return preferences.getString(key);
+  }
+
+  getMyData() async {
+    name = await getPref("name");
+    email = await getPref("email");
+    address = await getPref("address");
+    houseNumber = await getPref("houseNumber");
+    phoneNumber = await getPref("phoneNumber");
+    city = await getPref("city");
+    picturePath = await getPref("picture_path");
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getMyData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return GeneralPage(
@@ -48,10 +79,11 @@ class _PaymentPageState extends State<PaymentPage> {
                           margin: EdgeInsets.only(right: 12),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      widget.transaction.food.picturePath),
-                                  fit: BoxFit.cover)),
+                              image: picturePath == null
+                                  ? null
+                                  : DecorationImage(
+                                      image: NetworkImage(picturePath),
+                                      fit: BoxFit.cover)),
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -247,7 +279,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             2 * defaultMargin -
                             80,
                         child: Text(
-                          widget.transaction.user.name,
+                          name ?? '',
                           style: blackFontSytle3,
                           textAlign: TextAlign.right,
                         ))
@@ -265,7 +297,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       style: greyFontSytle,
                     ),
                     Text(
-                      widget.transaction.user.phoneNumber,
+                      phoneNumber ?? '',
                       style: blackFontSytle3,
                       textAlign: TextAlign.right,
                     )
@@ -289,7 +321,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             2 * defaultMargin -
                             80,
                         child: Text(
-                          widget.transaction.user.address,
+                          address ?? '',
                           style: blackFontSytle3,
                           textAlign: TextAlign.right,
                         ))
@@ -307,7 +339,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       style: greyFontSytle,
                     ),
                     Text(
-                      widget.transaction.user.houseNumber,
+                      houseNumber ?? '',
                       style: blackFontSytle3,
                       textAlign: TextAlign.right,
                     )
@@ -325,7 +357,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       style: greyFontSytle,
                     ),
                     Text(
-                      widget.transaction.user.city,
+                      city ?? '',
                       style: blackFontSytle3,
                       textAlign: TextAlign.right,
                     )
@@ -348,7 +380,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       });
 
                       String paymentURL = await context
-                          .bloc<TransactionCubit>()
+                          .read<TransactionCubit>()
                           .submitTransaction(widget.transaction.copyWith(
                               dateTime: DateTime.now(),
                               total: (widget.transaction.total * 1.1).toInt() +

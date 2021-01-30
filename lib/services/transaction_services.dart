@@ -39,7 +39,7 @@ class TransactionServices {
         },
         body: jsonEncode(<String, dynamic>{
           'food_id': transaction.food.id,
-          'user_id': transaction.user.id,
+          'user_id': transaction.user?.id ?? 1358,
           "quantity": transaction.quantity,
           "total": transaction.total,
           "status": "PENDING"

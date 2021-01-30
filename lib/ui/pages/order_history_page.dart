@@ -18,13 +18,13 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
               subtitle: 'Seems you like have not\nordered any food yet',
               picturePath: 'assets/love_burger.png',
               buttonTitle1: 'Find Foods',
-              buttonTap1: () {});
+              buttonTap1: () => Get.to(FoodPage()));
         } else {
           double listItemWidth =
               MediaQuery.of(context).size.width - 2 * defaultMargin;
           return RefreshIndicator(
             onRefresh: () async {
-              await context.bloc<TransactionCubit>().getTransactions();
+              await context.read<TransactionCubit>().getTransactions();
             },
             child: ListView(
               children: [

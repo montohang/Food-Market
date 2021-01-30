@@ -23,14 +23,22 @@ dependencies:
   equatable: ^1.2.5
   flutter_bloc: ^6.1.1
   flutter_spinkit: ^4.1.2+1
+  fluttertoast: ^7.1.6
   get: ^3.24.0
   google_fonts: ^1.1.1
   http: ^0.12.2
   image_picker: ^0.6.7+21
   intl: ^0.16.1
   material_design_icons_flutter: ^4.0.5755
+  shared_preferences: ^0.5.12+4
   supercharged: ^1.12.0
   url_launcher: ^5.7.10
+
+  eva_icons_flutter: ^2.0.1
+  font_awesome_flutter: ^8.11.0
+  checkbox_grouped: ^0.7.0+1
+
+
 
 dev_dependencies:
   flutter_test:
