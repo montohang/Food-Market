@@ -26,30 +26,34 @@ class _SettingPageState extends State<SettingPage> {
         onBackButtonPressed: () {
           Get.back();
         },
-        child: Container(
-          width: double.infinity,
-          color: Colors.white,
-          child: Column(
-              children: itemSetting.keys
-                  .map(
-                    (String key) => Padding(
-                      padding: const EdgeInsets.only(
-                          left: defaultMargin, right: defaultMargin),
-                      child: CheckboxListTile(
-                        title: Text(
-                          key,
-                          style: blackFontSytle3,
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              color: Colors.white,
+              child: Column(
+                  children: itemSetting.keys
+                      .map(
+                        (String key) => Padding(
+                          padding: const EdgeInsets.only(
+                              left: defaultMargin, right: defaultMargin),
+                          child: CheckboxListTile(
+                            title: Text(
+                              key,
+                              style: blackFontSytle3,
+                            ),
+                            value: itemSetting[key],
+                            onChanged: (bool value) {
+                              setState(() {
+                                itemSetting[key] = value;
+                              });
+                            },
+                          ),
                         ),
-                        value: itemSetting[key],
-                        onChanged: (bool value) {
-                          setState(() {
-                            itemSetting[key] = value;
-                          });
-                        },
-                      ),
-                    ),
-                  )
-                  .toList()),
+                      )
+                      .toList()),
+            ),
+          ],
         ),
       ),
     );
